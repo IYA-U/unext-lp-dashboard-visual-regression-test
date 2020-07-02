@@ -3,6 +3,7 @@
   "scripts": {
     "build": "next build",
     "start-background": "next start & NEXT_PID=$!",
+    "say-pid": "echo $NEXT_PID",
     "dev": "next",
     "precommit": "lint-staged",
     "lint": "eslint \"./**/*.{ts,tsx}\""
