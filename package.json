@@ -2,11 +2,10 @@
   "main": "pages/index.js",
   "scripts": {
     "build": "next build",
+    "start-background": "next start &",
+    "dev": "next",
     "precommit": "lint-staged",
-    "lint": "eslint \"./**/*.{ts,tsx}\"",
-    "sever-and-test": "start && cypress run",
-    "start": "next start",
-    "dev": "next"
+    "lint": "eslint \"./**/*.{ts,tsx}\""
   },
   "prettier": {
     "singleQuote": true,

@@ -1,15 +1,19 @@
-name: End-to-end tests
+name: Percy
 on: [push]
 jobs:
-  cypress-run:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@master
 
-      - name: test
-        uses: cypress-io/github-action@v1
+      - run: npm ci
+      - run: npm run build
+      - run: npm run start-background
+
+      - name: Percy Test
+        uses: percy/exec-action@v0.1.1
         with:
-          build: npm run build
-          start: npm start
-          wait-on: http://localhost:3000
+          command: "cypress run"
+        env:
+          PERCY_TOKEN: ffe74745b12eb336803c09084b0e4c381c64523fafdf6f167291d4c980a40e94
