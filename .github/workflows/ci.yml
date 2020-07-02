@@ -10,7 +10,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run start-background
-      - run: echo 'next's pid is' $NEXT_PID
+      - run: echo 'Next.js pid is' $NEXT_PID
 
       - name: Percy Test
         uses: percy/exec-action@v0.1.1
