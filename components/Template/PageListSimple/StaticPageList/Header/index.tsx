@@ -7,7 +7,7 @@ const StaticPageListHeader: React.FC = () => (
   <Wrap>
     <Lower>
       <Column>
-        文字変えました 🐹🐰 🦊🐶 🐱 🐭
+        This title has changed!!!
         <Arrow sortKey="path" sortOrder="asc" />
         <Arrow sortKey="path" sortOrder="desc" />
       </Column>
